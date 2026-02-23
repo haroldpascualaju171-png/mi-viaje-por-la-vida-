@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Autobiografía - Harold Pascual</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+}
+
+/* SECCIÓN PRINCIPAL */
+
+header{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:80px 10%;
+    gap:50px;
+    background:white;
+}
+
+.text-section{
+    flex:1;
+}
+
+.text-section h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.text-section p{
+    font-size:18px;
+    line-height:1.6;
+    color:#555;
+}
+
+.image-section{
+    flex:1;
+}
+
+.image-section img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* GALERÍA */
+
+.gallery{
+    padding:70px 10%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:14px;
+    color:#666;
+    line-height:1.5;
+}
+
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.modal-content{
+    background:white;
+    max-width:800px;
+    width:100%;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    position:relative;
+}
+
+.modal-content img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.modal-content h2{
+    margin-bottom:15px;
+}
+
+.modal-content p{
+    color:#555;
+    line-height:1.6;
+}
+
+.close{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="text-section">
+        <h1>Mi viaje por la vida</h1>
+        <p>
+            A veces la vida no se mide por los años que han pasado, sino por las experiencias que han marcado nuestra alma. Mi historia no es perfecta, pero es mía. Está hecha de sueños que comenzaron pequeños, de momentos que me hicieron fuerte y de personas que dejaron huellas imborrables en mi corazón mi nombre es Harold Yahir Santiago Pascual Aju y este es mi viaje por la vida...
+        </p>
+    </div>
+
+    <div class="image-section">
+        <img src="foto.png" alt="Mi Foto">
+    </div>
+</header>
+
+<section class="gallery">
+
+    <div class="card" onclick="openModal(this)">
+        <img src="foto2.jpg">
+        <h3>Infancia</h3>
+        <p>Mi vida comenzo un 16 de julio del año 2008 mi infancia estuvo llena de mucho amor y de recuerdos inolvidables, mis primeros años de vida recuerdo haberlos vivido junto a mi prima y tios, desde pequeño me gustaba explorar y conocer el mundo sin saber que en un futuro esto cambiaria...mis primeros años tambien los vivi en un pueblo de Solola llamado Santa Lucia Utatla de donde mis padres son originarios. </p>
+    </div>
+
+    <div class="card" onclick="openModal(this)">
+        <img src="foto4.jpg">
+        <h3>Mi primer logro</h3>
+        <p>En 2013 culminé mi etapa de educación preprimaria, logrando mi graduación de preparatoria. Este fue mi primer logro académico formal y marcó el inicio de una etapa de mayor compromiso con mis estudios.En 2014 celebré mis seis años, una etapa llena de alegría, sueños y aprendizajes que forman parte esencial de mi niñez.  .</p>
+    </div>
+
+    <div class="card" onclick="openModal(this)">
+        <img src="foto5.jpg">
+        <h3>Esfuerzo y superacion</h3>
+        <p>En 2023 me gradué del nivel básico, un paso importante en mi formación. Este logro fue resultado de esfuerzo, disciplina y perseverancia, valores que han marcado mi trayectoria estudiantil</p> 
+    </div>
+
+    <div class="card" onclick="openModal(this)">
+        <img src="foto3.jpg">
+        <h3>Mi Familia: El Pilar de Mi Vida</h3>
+        <p>Mi familia ha sido el fundamento más importante en mi crecimiento personal y en la formación de mis valores. Desde pequeño, he contado con el amor, el apoyo y la guía de mis padres y tios, quienes me han enseñado la importancia del respeto, la responsabilidad y la perseverancia.</p>
+    </div>
+
+    <div class="card" onclick="openModal(this)">
+        <img src="foto6.jpg">
+        <h3>Logros</h3>
+        <p>En 2025 celebré mis 17 años, encontrándome en mi último año de carrera. Me considero una persona divertida, perseverante y comprometida con mis metas. Aunque no tengo muchos amigos, valoro profundamente a quienes forman parte de mi vida.
+
+Este año me ha enseñado a disfrutar cada momento, a comprender que el tiempo es valioso y que cada experiencia deja una enseñanza. También fue un año especial porque tuve la oportunidad de conocer a una persona que hoy en día considero muy importante para mí. Su presencia ha significado apoyo, motivación y nuevas perspectivas en mi vida, recordándome que algunas personas llegan en el momento indicado para marcar una diferencia.</p>
+    </div>
+
+    <div class="card" onclick="openModal(this)">
+        <img src="foto7.jpg">
+        <h3>Reflexion final</h3>
+        <p>A lo largo de mi vida he aprendido que cada etapa trae enseñanzas importantes. Mis experiencias familiares, académicas y personales han formado la persona que soy hoy.
+
+Estoy convencido de que el éxito no solo se mide por los logros alcanzados, sino también por el crecimiento personal adquirido en el proceso. Mi historia aún se sigue escribiendo, y cada día representa una nueva oportunidad para avanzar hacia mis sueños.</p>
+    </div>
+
+</section>
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img">
+        <h2 id="modal-title"></h2>
+        <p id="modal-text"></p>
+    </div>
+</div>
+
+<script>
+function openModal(card){
+    const img = card.querySelector("img").src;
+    const title = card.querySelector("h3").innerText;
+    const text = card.querySelector("p").innerText;
+
+    document.getElementById("modal-img").src = img;
+    document.getElementById("modal-title").innerText = title;
+    document.getElementById("modal-text").innerText = text;
+
+    document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
